@@ -37,7 +37,7 @@ describe('Routes: ', () => {
 
   test('create: ', async () => {
     try {
-      const response = await axios.post('http://0.0.0.0:15000/api/contacts', { name: 'eddu', number: '1099767623'})
+      const response = await axios.post('http://0.0.0.0:15000/api/contacts', { lastName:'Test', firstName: 'eddu', contactNumber: '1099767623'})
 
       expect(response.data.status).toEqual('Contact created')
     } catch(e) {

@@ -1,6 +1,6 @@
 const Boom = require('boom')
 const Contact = require('../handlers/contactsManager')
-const contact = new Contact(process.env.MONGO_TEST_DB)
+const contact = new Contact(process.env.MONGO_URL)
 
 module.exports = {
   method: 'GET',

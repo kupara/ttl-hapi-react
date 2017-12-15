@@ -11,7 +11,7 @@ describe('Contact Manager: ', () => {
   })
 
   test('can create contact', async () => {
-    const response = await contactsManager.create({number: '211', name: 'One'})
+    const response = await contactsManager.create({contactNumber: '211', firstName: 'One', lastName: 'Two'})
 
     expect(response.status).toEqual('Contact created');
     contactsManager.clearAll()

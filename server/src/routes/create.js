@@ -3,7 +3,7 @@ const Boom = require('boom')
 const randomAvatar = require('random-avatar')
 
 const Contact = require('../handlers/contactsManager')
-const contact = new Contact(process.env.MONGO_TEST_DB)
+const contact = new Contact(process.env.MONGO_URL)
 
 module.exports = {
   method: 'POST',

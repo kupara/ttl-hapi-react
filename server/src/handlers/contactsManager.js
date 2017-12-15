@@ -86,6 +86,15 @@ class ContactManager {
       status: 'Contact deleted'
     }
   }
+
+  async clearAll(_contact) {
+    if (!this.ready) await this.init()
+
+    await Contact.remove()
+    return {
+      status: 'Contacts cleared'
+    }
+  }
 }
 
 module.exports = ContactManager
