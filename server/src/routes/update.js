@@ -5,7 +5,7 @@ const Contact = require('../handlers/contactsManager')
 const contact = new Contact(process.env.MONGO_URL)
 
 module.exports = {
-  method: 'PUT',
+  method: ['PUT', 'OPTIONS'],
   path: '/contacts/{oldNumber}',
   config: {
     handler: async (req, reply) => {
